@@ -4,41 +4,68 @@
     image-rendering: pixelated;
     padding: 0;
     margin: 0;
+    color: #fff;
 }
 
 body {
-    background-color: #ccc;
+    background-color: #111;
+    background-size: 100%, 100%;
 }
 
-#up-toolbar {
-    position: fixed;
-    background-color: #222;
-    width: 100%;
-    padding: 10px;
-    box-shadow: 0px 0px 10px #0005;
+
+.menu {
     display: flex;
-    gap: 5px;
+    height: 100svh;
 }
 
-#up-toolbar button {
-    cursor: pointer;
+.menu .panel {
+    width: 50%;
+}
+
+#panel1 {
+    box-shadow: 0px 0px 15px #0008;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#panel1 h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+
+    animation: title_animation 2s;
+    opacity: 1;
+}
+
+#panel1 button {
     background-color: #333;
+    width: 300px;
     border: none;
-    color: #fff;
-    padding: 10px;
-    width: 100%;
-    border-radius: 3px;
-}
-
-#up-toolbar h1 {
-    color: #fff;
-    background-color: #333;
     padding: 10px;
     border-radius: 3px;
-    cursor: default;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .2s;
 }
 
-#up-toolbar button[id="play-button"] {
-    background-color: #00e84a;
-    color: #111;
+#panel1 button:hover {
+    background-color: #ba00e8;
+    width: 310px;
+}
+
+#panel2 {
+    background-color: #151515;
+}
+
+@keyframes title_animation {
+    0%{
+        word-spacing: 400px;
+    }
+
+    100%{
+        word-spacing: normal;
+    }
 }
