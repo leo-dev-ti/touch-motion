@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+    image-rendering: pixelated;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ccc;
+    background-size: 100%, 100%;
+}
+
+#up-toolbar {
+    position: fixed;
+    background-color: #222;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 0px 10px #0005;
+    display: flex;
+    gap: 5px;
+}
+
+#up-toolbar button {
+    cursor: pointer;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#up-toolbar h1 {
+    color: #fff;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: default;
+}
+
+#up-toolbar button[id="play-button"] {
+    background-color: #ba00e8;
+    color: #fff;
+    transition: .2s;
+}
+
+#up-toolbar button[id="play-button"]:hover {
+    background-color: #ee2ff5;
+}
+
+#toast {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    background-color: #111d;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    transform: translateX(-50%);
+
+    transition: .5s;
+    opacity: 0;
+}

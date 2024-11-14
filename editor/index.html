@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Touch Motion</title>
+    <link rel="stylesheet" href="index.css" type="text/css" media="all" />
+</head>
+<body>
+    <div id="canvas"></div>
+    <div id="up-toolbar">
+        <button onclick="new Ator(prompt('Imagem do ator') || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5K_O1qx8oLehZwCAK_QlM8ke9Zp5SY83Xsg&s');">Novo ator</button>
+        <button onclick="new Passo(); toast('Novo passo criado'); proximoPasso()">Novo passo</button>
+        <button onclick="passoAnterior()">Passo anterior</button>
+        <h1 id="passoAtual">0</h1>
+        <button onclick="proximoPasso()">Próximo passo</button>
+        <button onclick="document.body.style.backgroundImage = `url(${prompt('Fundo da cena')})`;">Fundo</button>
+        <button id="play-button" onclick="play()">Play</button>
+    </div>
+
+    <h5 id="toast"></h5>
+    
+    <script src="index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
