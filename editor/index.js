@@ -1,5 +1,9 @@
-const atores = [];
-const passos = [];
+const data = JSON.parse(localStorage.getItem("projetoAtual"));
+
+document.title = "TS (" + data.nome + ")";
+
+const atores = JSON.parse(localStorage.getItem("projetoAtual")).atores || [];
+const passos = JSON.parse(localStorage.getItem("projetoAtual")).passos || [];
 var passoAtual = 0;
 
 var mouseX = 0;

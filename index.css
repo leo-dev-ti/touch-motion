@@ -33,11 +33,13 @@ body {
 }
 
 #panel1 h1 {
-    font-size: 60px;
+    font-size: 40px;
+    word-spacing: normal;
     margin-bottom: 20px;
+    text-align: center;
 
-    animation: title_animation 2s;
     opacity: 1;
+    animation: title_animation 2s;
 }
 
 #panel1 button {
@@ -57,15 +59,43 @@ body {
 }
 
 #panel2 {
+    padding: 10px;
     background-color: #151515;
+}
+
+.projeto {
+    padding: 10px;
+    background-color: #333;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: .2s;
+
+    animation: project_animation 1s;
+}
+
+.projeto:hover {
+    background-color: #ba00e8;
 }
 
 @keyframes title_animation {
     0%{
         word-spacing: 400px;
+        opacity: 0;
     }
 
     100%{
         word-spacing: normal;
+    }
+}
+
+@keyframes project_animation {
+    0%{
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
     }
 }
